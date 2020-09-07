@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#CDADBD">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descubra sua média ponderada bimestral!"
+        android:textSize="25sp"
+        android:id="@+id/tv_titulo"/>
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu nome:"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo"
+        android:layout_marginTop="25dp"
+        android:id="@+id/et_nome"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite a 1° nota:"
+        android:textSize="22sp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        android:layout_marginTop="30dp"
+        android:id="@+id/et_nota1"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o peso da 1° nota:"
+        android:inputType="number"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/et_nota1"
+        android:id="@+id/et_peso1"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite a 2° nota:"
+        android:inputType="number"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/et_peso1"
+        android:layout_marginTop="20dp"
+        android:id="@+id/et_nota2"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o peso da 2° nota:"
+        android:inputType="number"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/et_nota2"
+        android:id="@+id/et_peso2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descubra a média ponderada"
+        android:inputType="number"
+        android:textSize="22sp"
+        android:textColor="#F4F3F6"
+        android:background= "#F1169A"
+        app:layout_constraintTop_toBottomOf="@+id/et_peso2"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:id="@+id/bt_calcular"
+        android:onClick="calculaMediaPonderada"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/bt_calcular"
+        android:id="@+id/tv_resultado" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
